@@ -12,8 +12,8 @@
   <div class="left head_txt">您好：管理员 </div>
   <div class="right head_menu">
     <ul id="head_menu">
-      <li><a href="adminPage.php" target="_blank">管理首页</a></li>
-      <li><a href="http://blog.csdn.net/p641290710" target="_blank">开发者博客</a></li>
+      <li><a href="adminPage.php" target="_top">管理首页</a></li>
+      <li><a href="http://blog.csdn.net/p641290710" target="_top">开发者博客</a></li>
     </ul>
   </div>
 </div>

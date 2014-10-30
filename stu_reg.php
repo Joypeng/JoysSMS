@@ -1,5 +1,5 @@
-<!DOCTYPE HTML>
-<!-- Ê¹ÓÃHTML5¹æ·¶£¬Ê¡ÂÔ¶àÓà²¿·Ö -->
+ï»¿<!DOCTYPE HTML>
+<!-- HTML5æ ‡å‡† -->
 <html>
 <head>
 <link href="file/Style.Css" rel="stylesheet" type="text/css" />
@@ -13,6 +13,41 @@
 		border:1px solid 
 	}
 </style>
+<script type="text/javascript">
+	function checkRegister()
+	{
+	  if(document.login_f.s_name.value=='')
+		{
+			alert('å¿…é¡»è¾“å…¥å§“å');
+			document.login_f.s_name.focus();
+			return false
+		}
+	  if (document.login_f.IDcard.value=='')
+	   {
+	   		alert('å¿…é¡»è¾“å…¥èº«ä»½è¯å·ç ');
+			document.login_f.IDcard.focus();
+			return false
+	   }
+	   if (document.login_f.s_ID.value=='')
+	   {
+	   		alert('å¿…é¡»è¾“å…¥å­¦å·');
+			document.login_f.s_ID.focus();
+			return false
+	   }
+	   if (document.login_f.sex.value=='')
+	   {
+	   		alert('å¿…é¡»è¾“å…¥æ€§åˆ«');
+			document.login_f.sex.focus();
+			return false
+	   }
+	   if (document.login_f.Major.value=='')
+	   {
+	   		alert('å¿…é¡»è¾“å…¥ä¸“ä¸š');
+			document.login_f.Major.focus();
+			return false
+	   }
+	}
+</script>
 </head>
 <body>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" class="css_table" bgcolor='#E1E1E1'>
@@ -20,31 +55,35 @@
     <td colspan="3">
       <table width="100%" border="0" cellpadding="4" cellspacing="0" class="css_main_table">
         <tr>
-          <td class="css_main">×¢Òâ</td>
+          <td class="css_main">æ³¨æ„</td>
         </tr>
       </table>
     </td>
   </tr>
   <tr>
-    <td class="css_col11"><strong><font color=#50691B>ÉíĞÅÏ¢¼°Ñ§ºÅÒ»µ©Â¼Èë²»¿ÉĞŞ¸Ä£¡</font></strong></td>
+    <td class="css_col11"><strong><font color=#50691B>ä¸€æ—¦ç¡®å®šä¸å¯æ›´æ”¹</font></strong></td>
   </tr>
 </table>
-<form name="login_f" method="post" action=""  onSubmit="return checklogin();">
-	<div class = "login" align="center"  >
-		<li><p align = "center" >Ñ§ÉúÑ§¼®×¢²á</li></p>
-		<li><p>Ñ§ÉúĞÕÃû£º
-		<input name = "Name" type = "text" id = "name"></p></li>
-		<li><p>Éí·İÖ¤£º&nbsp;&nbsp;
-		<input name = "IDcard" type = "text" id = "IDcard"></p></li>
-		<li><p>Ñ§ºÅ£º&nbsp;&nbsp;&nbsp;&nbsp;
-		<input name = "s_ID" type = "text" id = "s_ID"></p></li>
-		<li><p>ĞÔ±ğ£º&nbsp;&nbsp;&nbsp;&nbsp;
-		<input name = "sex" type = "text" id = "sex"></p></li>
-		<li><p>×¨Òµ£º&nbsp;&nbsp;&nbsp;&nbsp;
-		<input name = "Major" type = "text" id = "Major"></p></li>
-		<li><p>È·¶¨×¢²á£º&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-		<input name = "submit" type = "submit" value = "×¢²á" >&nbsp;&nbsp;&nbsp;&nbsp;
-		<input class="Renew" value="ÖØ Ğ´" type="reset" />&nbsp;&nbsp;</p></li>
+<form name="login_f" method="post" action="addInform.php"  onSubmit="return checkRegister();">
+	<div class = "login" align="center">
+		<p align = "center" >å­¦ç±æ³¨å†Œ</p>
+		<li><p>å­¦å·ï¼š&nbsp;&nbsp;&nbsp;&nbsp;
+		<input name = "s_ID" type = "text" ></p></li>
+		<li><p>å­¦ç”Ÿå§“åï¼š
+		<input name = "Name" type = "text" ></p></li>
+		<li><p>èº«ä»½è¯ï¼š&nbsp;&nbsp;
+		<input name = "IDcard" type = "text" ></p></li>
+		<li><p>ä¸“ä¸šï¼š&nbsp;&nbsp;&nbsp;&nbsp;
+		<input name = "Major" type = "text" ></p></li>
+		<li>
+			<p>æ€§åˆ«ï¼š&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- <input name = "sex" type = "text" id = "sex"></p></li> -->
+			<input type="radio" name="sex" value="ç”·"/>ç”·&nbsp;&nbsp;&nbsp;&nbsp;
+	    	<input type="radio" name="sex" value="å¥³"/>å¥³&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>
+	    </li>
+		<li><p>ç¡®å®šæ³¨å†Œï¼š&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<input name = "submit" type = "submit" value = "ç¡®å®š" >&nbsp;&nbsp;&nbsp;&nbsp;
+		<input class="Renew" value="é‡å†™" type="reset" />&nbsp;&nbsp;</p></li>
 	</form>
 	</div>
 </body>

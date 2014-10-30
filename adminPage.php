@@ -12,7 +12,9 @@
     <frame src="main.php" name="mainFrame" id="mainFrame" title="main" />
   </frameset>
 </frameset>
-<noframes><body>
+<noframes>
+<body>
+
 </body>
 </noframes>
 </html>

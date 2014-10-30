@@ -33,7 +33,7 @@
   </tr>
   <tr>
     <td class="css_col11"><strong><font color=#50691B>Blog:http://blog.csdn.net/p641290710</font></strong></td>
-    <td class="css_col11"><strong><font color=#50691B>Email:1341510526@qq.com</font></strong></td>
+    <td class="css_col11"><strong><font color=#50691B>Email:pengjunweiright@163.com</font></strong></td>
   </tr>
 </table>
 <table width=100% border=0 cellpadding=3 cellspacing=1 class=css_table bgcolor='#E1E1E1'>
@@ -41,7 +41,7 @@
     <td colspan=3>
       <table width=100% border=0 cellpadding=4 cellspacing=0 class=css_main_table>
         <tr>
-          <td class=css_main>Github<a href=></a></td>
+          <td class=css_main>Github</td>
         </tr>
       </table>
     </td>

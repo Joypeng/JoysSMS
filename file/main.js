@@ -1,7 +1,13 @@
-﻿function killErrors() {return true;}
+﻿function killErrors() 
+{
+	return true;
+}
 window.onerror = killErrors;
 
-function $(id){return document.getElementById(id);}
+function $(id)
+{
+	return document.getElementById(id);
+}
 
 var lastCtrl = new Object();
 function DoLocation(ctrl)
