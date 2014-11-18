@@ -67,7 +67,7 @@
 		<?php }?>
 	</div>
 	<hr/>
-	<small>JOYS Student Management System 1.0<br/>Developers:JunWei Peng</small>
+	<small>JOYS Student Management System 1.0<br/>Developers:JunWei Peng，Jiading Liu</small>
 	
 </body>
 </html>

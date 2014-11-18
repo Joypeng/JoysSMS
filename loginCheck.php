@@ -3,6 +3,7 @@
 	
 	$user = $_POST['userName'];
 	$pass = $_POST['passWord'];
+	$_SESSION['user'] = $user;
 	/*$Enter = $_POST['Login_undo'];
 	管理员登录的校验*/
 	$flag = false;

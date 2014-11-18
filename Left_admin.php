@@ -21,15 +21,15 @@
     </ul>
     <div class="left_title"><a onclick="pucker_show('submenu_',3,'dis','block')" style="CURSOR:pointer;"> 信息修改</a></div>
     <ul id="submenu_3" class="dis">
-      <li class="left_link" onClick="DoLocation(this)"><a href="" target="mainFrame"> 学生个人信息修改</a></li>
+      <li class="left_link" onClick="DoLocation(this)"><a href="stu_Update.php" target="mainFrame"> 学生个人信息修改</a></li>
     </ul>
     <div class="left_title"><a onclick="pucker_show('submenu_',4,'dis','block')" style="CURSOR:pointer;"> 学生毕业</a></div>
     <ul id="submenu_4" class="dis">
-      <li class="left_link" onClick="DoLocation(this)"><a href=""  target="mainFrame"> 毕业操作</a></li>
+      <li class="left_link" onClick="DoLocation(this)"><a href="graduate.php"  target="mainFrame"> 毕业操作</a></li>
     </ul>
     <div class="left_title"><a onclick="pucker_show('submenu_',5,'dis','block')" style="CURSOR:pointer;"> 历史查询</a></div>
     <ul id="submenu_5" class="dis">
-	<li class="left_link" onClick="DoLocation(this)"><a href=""  target="mainFrame"> 离校学生查询</a></li>
+	<li class="left_link" onClick="DoLocation(this)"><a href="graduate.php?action=log"  target="mainFrame"> 离校学生查询</a></li>
     </ul>
   </div>
 </div>

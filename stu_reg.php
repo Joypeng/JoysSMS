@@ -16,28 +16,22 @@
 <script type="text/javascript">
 	function checkRegister()
 	{
-	  if(document.login_f.s_name.value=='')
+	  if(document.login_f.s_ID.value=='')
+		{
+		   		alert('必须输入学号');
+				document.login_f.s_ID.focus();
+				return false
+		}
+	  if(document.login_f.Name.value=='')
 		{
 			alert('必须输入姓名');
-			document.login_f.s_name.focus();
+			document.login_f.Name.focus();
 			return false
 		}
-	  if (document.login_f.IDcard.value=='')
+	  if (document.login_f.IDcard.value.length!=18)
 	   {
-	   		alert('必须输入身份证号码');
+	   		alert('身份证号码不符合规范');
 			document.login_f.IDcard.focus();
-			return false
-	   }
-	   if (document.login_f.s_ID.value=='')
-	   {
-	   		alert('必须输入学号');
-			document.login_f.s_ID.focus();
-			return false
-	   }
-	   if (document.login_f.sex.value=='')
-	   {
-	   		alert('必须输入性别');
-			document.login_f.sex.focus();
 			return false
 	   }
 	   if (document.login_f.Major.value=='')
@@ -50,6 +44,11 @@
 </script>
 </head>
 <body>
+<?php 
+	session_start();
+	$user = isset($_SESSION['user'])?$_SESSION['user']:'';
+?>
+<?php if($user =='Admin'){ ?>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" class="css_table" bgcolor='#E1E1E1'>
   <tr class="css_menu">
     <td colspan="3">
@@ -68,13 +67,13 @@
 	<div class = "login" align="center">
 		<p align = "center" >学籍注册</p>
 		<li><p>学号：&nbsp;&nbsp;&nbsp;&nbsp;
-		<input name = "s_ID" type = "text" ></p></li>
+		<input name = "s_ID" type = "text" id = "s_ID" ></p></li>
 		<li><p>学生姓名：
-		<input name = "Name" type = "text" ></p></li>
+		<input name = "Name" type = "text" id = "Name"></p></li>
 		<li><p>身份证：&nbsp;&nbsp;
-		<input name = "IDcard" type = "text" ></p></li>
+		<input name = "IDcard" type = "text" id = "IDcard"></p></li>
 		<li><p>专业：&nbsp;&nbsp;&nbsp;&nbsp;
-		<input name = "Major" type = "text" ></p></li>
+		<input name = "Major" type = "text" id = "Major"></p></li>
 		<li>
 			<p>性别：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<!-- <input name = "sex" type = "text" id = "sex"></p></li> -->
@@ -86,5 +85,13 @@
 		<input class="Renew" value="重写" type="reset" />&nbsp;&nbsp;</p></li>
 	</form>
 	</div>
+	<?php  }?>
+<!--  	<?php
+	// $action = isset($_GET["action"])?$_GET["action"]:"";
+	// if($action == "over")
+	// {
+	// 	echo "完成注册！";
+	// }
+	?>  -->
 </body>
 </html>
