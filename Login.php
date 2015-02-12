@@ -49,9 +49,9 @@
 	<div class = "login" align="center"  >
 		<form name="login_f" method="post" action="loginCheck.php"  onSubmit="return checklogin();">
 			<li><p>ManageID：
-			<input name = "userName" type = "text" id = "username"></p></li>
+			<input name = "user" type = "text" id = "username"></p></li>
 			<li><p>PassWord：
-			<input name = "passWord" type = "password" id = "password"></p></li>
+			<input name = "pass" type = "password" id = "password"></p></li>
 			<li><p>管理员登录：&nbsp;&nbsp;&nbsp;
 			<input name = "submit" type = "submit" value = "登录" >&nbsp;&nbsp;
 			<input class="Renew" value="重 写" type="reset" />&nbsp;&nbsp;</p></li>
@@ -67,7 +67,7 @@
 		<?php }?>
 	</div>
 	<hr/>
-	<small>JOYS Student Management System 1.0<br/>Developers:JunWei Peng，Jiading Liu</small>
+	<small>JOYS Student Management System 1.0<br/>Developers:JunWei Peng</small>
 	
 </body>
 </html>

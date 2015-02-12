@@ -16,39 +16,69 @@
 <script type="text/javascript">
 	function checkRegister()
 	{
-	  if(document.login_f.s_ID.value=='')
+		var regExp=/(^\d{8}$)/;
+		//var regExp2=/(^\d$)/;
+		var chinese =/^[\u0391-\uFFE5]+$/;
+		var regid = /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/; 
+		
+		
+		if(!regExp .test (document.login_f.s_ID.value))
+		{
+			alert ("输入的必须全是数字!学号设为8位!");
+			document.login_f.s_ID.focus();
+			return false ;
+		}
+		if (document.login_f.Name.value=='')
+	   {
+	   		alert('必须输入姓名');
+			document.login_f.Name.focus();
+			return false
+	   }
+		// if(!chinese.test (document.login_f.Name.value))
+		// {
+			// alert('姓名必须为中文');
+			// document.login_f.Name.focus();
+			// return false
+		// }
+		
+		if(!regid.test(document.login_f.IDcard.value))
+		{ 
+			alert( "身份证信息输入错误请重新输入（输入为15位或者18位，18位时最后一位可以是数字也可以是X）!"); 
+			document.login_f.IDcard.focus();
+			return false;
+		} 
+		
+		
+	  /* if(document.login_f.s_ID.value=='')
 		{
 		   		alert('必须输入学号');
 				document.login_f.s_ID.focus();
 				return false
-		}
-	  if(document.login_f.Name.value=='')
-		{
-			alert('必须输入姓名');
-			document.login_f.Name.focus();
-			return false
-		}
-	  if (document.login_f.IDcard.value.length!=18)
+		} */
+	  
+	  /* if (document.login_f.IDcard.value=='')
 	   {
-	   		alert('身份证号码不符合规范');
+	   		alert('必须输入身份证号码');
 			document.login_f.IDcard.focus();
 			return false
-	   }
+	   } */
+	   
 	   if (document.login_f.Major.value=='')
 	   {
 	   		alert('必须输入专业');
 			document.login_f.Major.focus();
 			return false
 	   }
+	   
+	   if(document.login_f.sex.value.length==0)
+	   {
+		  alert("请选择性别!");
+		  return false;
+		}
 	}
 </script>
 </head>
 <body>
-<?php 
-	session_start();
-	$user = isset($_SESSION['user'])?$_SESSION['user']:'';
-?>
-<?php if($user =='Admin'){ ?>
 <table width="100%" border="0" cellpadding="3" cellspacing="1" class="css_table" bgcolor='#E1E1E1'>
   <tr class="css_menu">
     <td colspan="3">
@@ -85,13 +115,12 @@
 		<input class="Renew" value="重写" type="reset" />&nbsp;&nbsp;</p></li>
 	</form>
 	</div>
-	<?php  }?>
-<!--  	<?php
-	// $action = isset($_GET["action"])?$_GET["action"]:"";
-	// if($action == "over")
-	// {
-	// 	echo "完成注册！";
-	// }
-	?>  -->
+ 	<?php
+	$action = isset($_GET["action"])?$_GET["action"]:"";
+	if($action == "over")
+	{
+		echo "完成注册！";
+	}
+	?> 
 </body>
 </html>

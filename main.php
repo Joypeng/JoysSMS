@@ -1,14 +1,13 @@
 ﻿<!DOCTYPE HTML>
 <!-- 使用HTML5规范 -->
-<html>
 <head>
 <title>main</title>
 <link href="file/Style.Css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <?php  session_start(); ?>
+  <?php session_start(); ?>
   <?php 
-     $user = isset($_SESSION['user'])?$_SESSION['user']:"";
+	$user = isset($_SESSION['user'])?$_SESSION['user']:"";
   ?>
   <?php
     if($user == "")
@@ -37,6 +36,8 @@
        <td class="css_col11"><strong><font color = "#0000FF">登录cookie有效时间为1200秒</a></strong></td>
     </tr>
   </table>
+  </body>
+  </html>
   <table width="100%" border="0" cellpadding="3" cellspacing="1" class="css_table" bgcolor='#E1E1E1'>
     <tr class="css_menu">
       <td colspan="3">

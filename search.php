@@ -1,22 +1,10 @@
 <?php
-	session_start();
+if(isset($_POST['Query'])){
+
+		$search=$_POST['Query'];//获取查询信息
 	
-	$search=$_POST['search'];
-	unset($_SESSION['search']);
-
-	/*echo '<pre>';
-	var_dump($_POST['search']);
-	return ;*/
-
-	foreach ($_SESSION['student'] as $k1 => $value) {
-		# code...
-		if($search==$_SESSION['student'][$k1]['s_ID']||$search==$_SESSION['student'][$k1]['IDcard']||$search==$_SESSION['student'][$k1]['Name']||$search==$_SESSION['student'][$k1]['sex']||$search==$_SESSION['student'][$k1]['Major']){
-			$i = 1;
-			$stu = $_SESSION['student'][$k1]['s_ID'];
-			$_SESSION['search'][$stu] = $stu;
-		}
+		header("location:stu_Query.php?search=".$search."&action=search");
 	}
-	if(isset($i))
-		header("location:stu_Query.php?user=Admin&action=search");
 	else
-	 	header("location:stu_Query.php?user=Admin&action=q_error");
+		header("HTTP/1.0 404 Not Found");
+?>
